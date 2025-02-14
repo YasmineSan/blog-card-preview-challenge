@@ -8,6 +8,11 @@ export default defineNuxtConfig({
   },
   css: ['~/assets/css/tailwind.css'],
   devtools: { enabled: true },
+  nitro: {
+    output: {
+      publicDir: '.output/public',
+    },
+  },
   app: {
     head: {
       link: [
