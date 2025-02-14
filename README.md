@@ -26,7 +26,7 @@ Les utilisateurs doivent pouvoir :
 
 - ✅ HTML5 sémantique
 - ✅ CSS avec TailwindCSS
-- ✅ Flexbox & Grid
+- ✅ Flexbox
 - ✅ Workflow Mobile-First
 - ✅ [Nuxt 3](https://nuxt.com/) - Framework Vue.js
 - ✅ [Nuxt Image](https://image.nuxt.com/) - Optimisation des images
