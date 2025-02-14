@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { NuxtImg } from '#components'
-import articleImage from '@/assets/images/illustration-article.svg'
+import articleImage from 'public/images/illustration-article.svg'
 </script>
 
 <template>
@@ -29,9 +29,23 @@ import articleImage from '@/assets/images/illustration-article.svg'
         >
           Learning
         </span>
-        <p class="text-sm">Publish 21 Dec 2023</p>
+        <p class="text-sm py-2">Publish 21 Dec 2023</p>
+        <article>
+          <h1 class="text-lg font-extrabold">HTML & CSS foundations</h1>
+          <p class="text-sm text-gray py-2">
+            These languages are the backbone of every website, defining
+            structure, content, and presentation.
+          </p>
+        </article>
+        <article class="flex items-end">
+          <img
+            src="/public/images/greg-avatar.webp"
+            alt="avatar of Greg"
+            class="size-8"
+          />
+          <p class="pl-2 font-extrabold">Greg Hooper</p>
+        </article>
       </section>
-      <section></section>
     </div>
   </div>
 </template>
