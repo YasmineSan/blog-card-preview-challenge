@@ -1,21 +1,29 @@
 <script setup lang="ts">
 import { NuxtImg } from '#components'
 import articleImage from 'public/images/illustration-article.svg'
+const isHovered = ref(false)
 </script>
 
 <template>
   <div
     class="bg-primary w-full min-h-screen font-figtree flex items-center justify-center p-4 relative"
   >
-    <div class="relative w-full max-w-card-lg-w xs:max-w-card-sm-w">
+    <div
+      class="relative w-full max-w-card-lg-w xs:max-w-card-sm-w"
+      @mouseenter="isHovered = true"
+      @mouseleave="isHovered = false"
+    >
       <!-- Shadow -->
       <div
-        class="absolute w-full h-full bg-dark rounded-xl left-2 top-2 z-0"
+        :class="[
+          'absolute w-full h-full bg-dark rounded-xl left-2 top-2 z-0 transition-all duration-300',
+          isHovered ? 'translate-x-1 translate-y-1 scale-102 opacity-80' : '',
+        ]"
       ></div>
 
       <!-- Blog Card -->
       <section
-        class="relative bg-white w-full rounded-xl shadow-lg p-6 z-10 border border-dark"
+        class="relative bg-white w-full rounded-xl shadow-lg p-6 z-10 border border-dark group transition-shadow duration-300 group-hover:shadow-2xl"
       >
         <article class="flex flex-col items-center">
           <NuxtImg
@@ -31,7 +39,11 @@ import articleImage from 'public/images/illustration-article.svg'
         </span>
         <p class="text-sm py-2">Publish 21 Dec 2023</p>
         <article>
-          <h1 class="text-lg font-extrabold">HTML & CSS foundations</h1>
+          <h1
+            class="text-lg font-extrabold cursor-pointer group-hover:text-primary transition-colors duration-75"
+          >
+            HTML & CSS foundations
+          </h1>
           <p class="text-sm text-gray py-2">
             These languages are the backbone of every website, defining
             structure, content, and presentation.
