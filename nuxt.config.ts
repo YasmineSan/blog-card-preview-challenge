@@ -2,6 +2,19 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   modules: ['@nuxtjs/tailwindcss'],
-  css: ["~/assets/css/tailwind.css"],
-  devtools: { enabled: true }
+  tailwindcss: {
+    configPath: 'tailwind.config.js',
+  },
+  css: ['~/assets/css/tailwind.css'],
+  devtools: { enabled: true },
+  app: {
+    head: {
+      link: [
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css2?family=Figtree:wght@500;800&display=swap',
+        },
+      ],
+    },
+  },
 })
