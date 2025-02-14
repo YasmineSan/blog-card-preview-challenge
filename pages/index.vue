@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { NuxtImg } from '#components'
-import articleImage from 'public/images/illustration-article.svg'
 import BlogCard from '@/components/BlogCard.vue'
 const isHovered = ref(false)
 </script>

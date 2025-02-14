@@ -21,7 +21,7 @@ const isHovered = ref(false)
     @mouseenter="isHovered = true"
     @mouseleave="isHovered = false"
   >
-    <!-- Ombre dynamique au hover -->
+    <!-- Shadow + hover -->
     <div
       :class="[
         'absolute w-full h-full bg-dark rounded-xl left-2 top-2 z-0 transition-all duration-300',
