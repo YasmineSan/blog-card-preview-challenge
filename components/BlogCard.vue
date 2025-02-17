@@ -35,10 +35,10 @@ const isHovered = ref(false)
     >
       <!-- Article img + hidden title -->
       <article class="flex flex-col items-center">
-        <h2 class="sr-only">Illustration de l'article</h2>
+        <h2 class="sr-only">illustration article's</h2>
         <NuxtImg
           :src="imageSrc"
-          alt="Illustration de l'article"
+          alt="abstract image yellow and black"
           class="w-img-lg-w h-img-lg-h xs:w-img-sm-w xs:h-img-sm-h object-cover mb-6 rounded-lg"
         />
       </article>
