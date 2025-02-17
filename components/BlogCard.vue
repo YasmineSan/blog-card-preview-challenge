@@ -33,12 +33,12 @@ const isHovered = ref(false)
     <section
       class="relative bg-white w-full rounded-xl shadow-lg p-6 z-10 border border-dark group transition-shadow duration-300 group-hover:shadow-2xl"
     >
-      <!-- Titre caché pour l'accessibilité -->
-      <h2 class="sr-only">Blog Preview Card</h2>
+      <!-- Article img + hidden title -->
       <article class="flex flex-col items-center">
+        <h2 class="sr-only">Illustration de l'article</h2>
         <NuxtImg
           :src="imageSrc"
-          alt="Article image"
+          alt="Illustration de l'article"
           class="w-img-lg-w h-img-lg-h xs:w-img-sm-w xs:h-img-sm-h object-cover mb-6 rounded-lg"
         />
       </article>
@@ -48,9 +48,9 @@ const isHovered = ref(false)
       >
         {{ category }}
       </span>
-
       <p class="text-sm py-2">{{ date }}</p>
 
+      <!-- Main content-->
       <article>
         <h2
           class="text-lg font-extrabold cursor-pointer group-hover:text-primary transition-colors duration-75"
@@ -62,10 +62,12 @@ const isHovered = ref(false)
         </p>
       </article>
 
+      <!-- Author + title -->
       <article class="flex items-end">
+        <h3 class="sr-only">Auteur</h3>
         <img
           :src="avatarSrc"
-          alt="avatar of {{ author }}"
+          alt="Photo de {{ author }}"
           class="size-8 rounded-full"
         />
         <p class="pl-2 font-extrabold">{{ author }}</p>
