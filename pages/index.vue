@@ -4,17 +4,15 @@ const isHovered = ref(false)
 </script>
 
 <template>
-  <div
-    class="bg-primary w-full min-h-screen font-figtree flex items-center justify-center p-4 relative"
-  >
+  <main class="flex items-center justify-center min-h-screen bg-primary p-6">
     <BlogCard
-      title="HTML & CSS foundations"
+      imageSrc="/images/illustration-article.svg"
       category="Learning"
       date="Published 21 Dec 2023"
+      title="HTML & CSS foundations"
       description="These languages are the backbone of every website, defining structure, content, and presentation."
-      imageSrc="/images/illustration-article.svg"
       avatarSrc="/images/greg-avatar.webp"
       author="Greg Hooper"
     />
-  </div>
+  </main>
 </template>
