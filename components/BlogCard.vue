@@ -33,6 +33,8 @@ const isHovered = ref(false)
     <section
       class="relative bg-white w-full rounded-xl shadow-lg p-6 z-10 border border-dark group transition-shadow duration-300 group-hover:shadow-2xl"
     >
+      <!-- Titre caché pour l'accessibilité -->
+      <h2 class="sr-only">Blog Preview Card</h2>
       <article class="flex flex-col items-center">
         <NuxtImg
           :src="imageSrc"
@@ -50,11 +52,11 @@ const isHovered = ref(false)
       <p class="text-sm py-2">{{ date }}</p>
 
       <article>
-        <h1
+        <h2
           class="text-lg font-extrabold cursor-pointer group-hover:text-primary transition-colors duration-75"
         >
           {{ title }}
-        </h1>
+        </h2>
         <p class="text-sm text-gray py-2">
           {{ description }}
         </p>
